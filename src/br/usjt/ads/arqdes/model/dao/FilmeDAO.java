@@ -5,8 +5,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import com.mysql.jdbc.Connection;
-import com.mysql.jdbc.PreparedStatement;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 
 import br.usjt.ads.arqdes.model.entity.Filme;
 import br.usjt.ads.arqdes.model.entity.Genero;
@@ -18,7 +18,7 @@ public class FilmeDAO {
 		String sql = "insert into Filme (titulo, descricao, diretor, posterpath, "
 				+ "popularidade, data_lancamento, id_genero) values (?,?,?,?,?,?,?)";
 
-		try (Connection conn = ConnectionFactory.getConnection(); PreparedStatement pst = conn.prepareStatement(sql);) {
+		try (java.sql.Connection conn = ConnectionFactory.getConnection(); PreparedStatement pst = conn.prepareStatement(sql);) {
 
 			pst.setString(1, filme.getTitulo());
 			pst.setString(2, filme.getDescricao());
