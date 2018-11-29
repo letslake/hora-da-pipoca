@@ -44,8 +44,8 @@
 		<property name="driverClassName"
 			value="com.mysql.jdbc.Driver"></property>
 		<property name="url" value="jdbc:mysql://localhost/pipocadb"></property>
-		<property name="username" value="root"></property>
-		<property name="password" value="le060199"></property>
+		<property name="username" value="morone"></property>
+		<property name="password" value="morone123"></property>
 	</bean>
 
 	<bean id="transactionManager"
